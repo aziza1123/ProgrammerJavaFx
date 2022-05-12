@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.aziza.gui.NaderpubController">
+<children>
+      <AnchorPane prefHeight="704.0" prefWidth="1089.0" style="-fx-background-radius: 20;">
+         <children>
+            <AnchorPane prefHeight="800.0" prefWidth="1341.0" style="-fx-background-color: #030307; -fx-background-radius: 15;">
+               <children>
+                  <Pane layoutX="525.0" layoutY="-1.0" prefHeight="93.0" prefWidth="405.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                        <Pane layoutX="-14.0" prefHeight="93.0" prefWidth="405.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@../../../../../../../Bureau/Gestion_Forum%20Projet%20java%20Fx/src/css/fullpackstyling.css">
+                           <children>
+                              <Label layoutX="286.0" layoutY="21.0" text="PROGRAMNA" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <AnchorPane layoutX="140.0" layoutY="92.0" prefHeight="669.0" prefWidth="1135.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                      
+                        <Label layoutX="68.0" layoutY="156.0" text="Espace" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="183.0" layoutY="156.0" text="Commentaire" textFill="#fff600">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="81.0" layoutY="576.0" prefHeight="76.0" prefWidth="1016.0" style="-fx-background-radius: 20;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css" />
+                        <TableView fx:id="ListPubs2" layoutX="915.0" layoutY="175.0" prefHeight="127.0" prefWidth="173.0" style="-fx-background-color: #131022;" visible="false">
+                          <columns>
+                            <TableColumn fx:id="libelle_Pubs" prefWidth="75.0" text="libelle" />
+                              <TableColumn fx:id="Nbr_Reaction" minWidth="8.0" prefWidth="109.0" text="Reactions" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="id_tab1" layoutX="68.0" layoutY="200.0" prefHeight="271.0" prefWidth="326.0" style="-fx-background-color: #131022;">
+                           <columns>
+                              <TableColumn fx:id="col_Num" minWidth="0.0" prefWidth="0.0" text="numero" />
+                              <TableColumn fx:id="col_Contenu" prefWidth="302.0" text="contenu" />
+                           </columns>
+                        </TableView>
+                        <TableView fx:id="id_tab" layoutX="726.0" layoutY="88.0" onMouseClicked="#fill" prefHeight="277.0" prefWidth="291.0" style="-fx-background-color: #131022;">
+                           <columns>
+                              <TableColumn fx:id="col_Media" prefWidth="75.0" text="media" />
+                              <TableColumn fx:id="col_Titre" prefWidth="114.0" text="titre" />
+                              <TableColumn fx:id="col_Description" prefWidth="100.0" text="description" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="id_titre" layoutX="677.0" layoutY="381.0" prefHeight="38.0" prefWidth="170.0" />
+                        <TextField fx:id="id_media" layoutX="901.0" layoutY="381.0" prefHeight="38.0" prefWidth="170.0" />
+                        <TextField fx:id="id_description" layoutX="795.0" layoutY="432.0" prefHeight="92.0" prefWidth="170.0" />
+                        <Label layoutX="851.0" layoutY="31.0" text="Publication" textFill="#fff600">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="724.0" layoutY="31.0" prefHeight="38.0" prefWidth="110.0" text="Espace" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="id_mod" layoutX="858.0" layoutY="542.0" mnemonicParsing="false" onAction="#modifier" style="-fx-background-color: #a868a0;" text="Modifier" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="id_supprimer" layoutX="537.0" layoutY="527.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #a868a0;" text="Supprimer" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Ajout" layoutX="537.0" layoutY="456.0" mnemonicParsing="false" onAction="#goajout" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #a868a0;" text="Ajouter" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="barre1" layoutX="402.0" layoutY="38.0" />
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="132.0" layoutY="21.0" onMouseClicked="#GoToHome" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ressources/Homeicon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="170.0" layoutY="29.0" text="Acceuil" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="85.0" fitWidth="79.0" layoutX="41.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ressources/publicationicon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

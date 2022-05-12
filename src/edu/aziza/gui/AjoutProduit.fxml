@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="626.0" prefWidth="1046.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.aziza.gui.AjoutProduitController">
+  <children>
+      <AnchorPane prefHeight="704.0" prefWidth="1089.0" style="-fx-background-radius: 20;">
+         <children>
+            <AnchorPane prefHeight="800.0" prefWidth="1341.0" style="-fx-background-color: #030307; -fx-background-radius: 15;">
+               <children>
+                  <Pane layoutX="525.0" layoutY="-1.0" prefHeight="93.0" prefWidth="405.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                        <Pane layoutX="-14.0" prefHeight="93.0" prefWidth="405.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@../../../../../../../Bureau/Gestion_Forum%20Projet%20java%20Fx/src/css/fullpackstyling.css">
+                           <children>
+                              <Label layoutX="287.0" layoutY="21.0" text="PROGRAMNA" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <AnchorPane layoutX="147.0" layoutY="92.0" prefHeight="669.0" prefWidth="1135.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                      
+                        <Label layoutX="36.0" layoutY="21.0" text="Espace" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="125.0" layoutY="21.0" text="Produit" textFill="#fff600">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="81.0" layoutY="576.0" prefHeight="76.0" prefWidth="1016.0" style="-fx-background-radius: 20;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css" />
+                        <TableView fx:id="ListPubs2" layoutX="915.0" layoutY="175.0" prefHeight="127.0" prefWidth="173.0" style="-fx-background-color: #131022;" visible="false">
+                          <columns>
+                            <TableColumn fx:id="libelle_Pubs" prefWidth="75.0" text="libelle" />
+                              <TableColumn fx:id="Nbr_Reaction" minWidth="8.0" prefWidth="109.0" text="Reactions" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="barre" layoutX="423.0" layoutY="25.0" prefHeight="31.0" prefWidth="251.0" />
+                        
+                        
+                        <AnchorPane layoutX="805.0" layoutY="249.0" prefHeight="171.0" prefWidth="173.0">
+                           <children>
+                              <TextField fx:id="tfprix" layoutX="74.0" layoutY="43.0" />
+                              <TextField fx:id="tfquantite" layoutX="74.0" layoutY="101.0" />
+                              <Label layoutX="8.0" layoutY="161.0" text="img" />
+                           </children></AnchorPane>
+                        <TableView fx:id="tabproduit" layoutX="36.0" layoutY="82.0" onSort="#Afficher" prefHeight="335.0" prefWidth="592.0" style="-fx-background-color: #131022;">
+                           <columns>
+                              <TableColumn fx:id="pnom" prefWidth="75.0" text="Nom" />
+                              <TableColumn fx:id="pdescription" prefWidth="167.0" text="Description" />
+                              <TableColumn fx:id="pprix" prefWidth="124.0" text="Prix" />
+                              <TableColumn fx:id="pquantite" prefWidth="123.0" text="Quantite" />
+                              <TableColumn fx:id="pimg" prefWidth="75.0" text="img" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="modifbtn" layoutX="39.0" layoutY="519.0" mnemonicParsing="false" onAction="#Modifier" style="-fx-background-color: #a868a0;" text="Modifier" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="supprbtn" layoutX="128.0" layoutY="519.0" mnemonicParsing="false" onAction="#supprimer" style="-fx-background-color: #a868a0;" text="Supprimer" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="tfNom" layoutX="878.0" layoutY="173.0" />
+                        <TextField fx:id="tfDescription" layoutX="878.0" layoutY="236.0" />
+                        <Label layoutX="788.0" layoutY="178.0" text="Name" textFill="#f2f2f2">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="788.0" layoutY="241.0" text="Description" textFill="#f8f5f5">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="788.0" layoutY="299.0" text="Prix" textFill="#f2f2f2">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="798.0" layoutY="359.0" text="Quantitee" textFill="#f2eded">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="ajoutbtn" layoutX="714.0" layoutY="504.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #a868a0;" text="Ajouter" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="cbtriObjPred" layoutX="228.0" layoutY="36.0" onAction="#selectTriObjPred" prefWidth="150.0" />
+                       
+                     
+                        <ImageView fx:id="tfimg" fitHeight="150.0" fitWidth="200.0" layoutX="872.0" layoutY="396.0" onDragDropped="#dropimg" onDragOver="#dragover" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="pdf" layoutX="442.0" layoutY="520.0" mnemonicParsing="false" onAction="#ExportPDF" style="-fx-background-color: #a868a0;" text="PDF">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="907.0" layoutY="25.0" mnemonicParsing="false" onAction="#showcoupons" prefHeight="19.0" prefWidth="148.0" text="participer giveaway" />
+                        <Hyperlink fx:id="givewayhyperlink" layoutX="936.0" layoutY="82.0" text="Hyperlink" />
+                        <Hyperlink fx:id="givewaytitle" layoutX="936.0" layoutY="121.0" text="Hyperlink" />
+                        <ImageView fx:id="giveawaypic" fitHeight="101.0" fitWidth="148.0" layoutX="736.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="132.0" layoutY="21.0" onMouseClicked="#GoToHomeBack" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ressources/Homeicon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="170.0" layoutY="29.0" text="Acceuil" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="86.0" fitWidth="70.0" layoutX="62.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ressources/producticon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="515.0" prefWidth="1072.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.aziza.gui.ActiviteController">
+   <children>
+      <AnchorPane prefHeight="704.0" prefWidth="1089.0" style="-fx-background-radius: 20;">
+         <children>
+            <AnchorPane prefHeight="800.0" prefWidth="1341.0" style="-fx-background-color: #030307; -fx-background-radius: 15;">
+               <children>
+                  <Pane layoutX="525.0" layoutY="-1.0" prefHeight="93.0" prefWidth="405.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                        <Pane layoutX="-14.0" prefHeight="93.0" prefWidth="405.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@../../../../../../../Bureau/Gestion_Forum%20Projet%20java%20Fx/src/css/fullpackstyling.css">
+                           <children>
+                              <Label layoutX="262.0" layoutY="21.0" prefHeight="27.0" prefWidth="141.0" text="PROGRAMNA" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <AnchorPane layoutX="140.0" layoutY="92.0" prefHeight="669.0" prefWidth="1135.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                      
+                        <Label layoutX="36.0" layoutY="21.0" text="Espace" textFill="WHITE">
+                           <font>
+                              <Font size="38.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="167.0" layoutY="21.0" prefHeight="55.0" prefWidth="141.0" text="Activité" textFill="#fff600">
+                           <font>
+                              <Font size="38.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="81.0" layoutY="576.0" prefHeight="76.0" prefWidth="1016.0" style="-fx-background-radius: 20;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css" />
+                        <TableView fx:id="ListPubs2" layoutX="915.0" layoutY="175.0" prefHeight="127.0" prefWidth="173.0" style="-fx-background-color: #131022;" visible="false">
+                          <columns>
+                            <TableColumn fx:id="libelle_Pubs" prefWidth="75.0" text="libelle" />
+                              <TableColumn fx:id="Nbr_Reaction" minWidth="8.0" prefWidth="109.0" text="Reactions" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="35.0" layoutY="111.0" text="Nom" textFill="#da54c1" />
+                        <Label layoutX="30.0" layoutY="184.0" text="Description" textFill="#da54c1" />
+                        <Label layoutX="30.0" layoutY="399.0" text="prix" textFill="#da54c1" />
+                        <TextField fx:id="tfnoma" layoutX="212.0" layoutY="106.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextField fx:id="tfprixa" layoutX="213.0" layoutY="401.0" prefHeight="31.0" prefWidth="200.0" />
+                        <TextArea fx:id="tadesca" layoutX="213.0" layoutY="184.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Button fx:id="btnadd" layoutX="262.0" layoutY="476.0" mnemonicParsing="false" onAction="#Ajouter" style="-fx-background-color: #a868a0;" text="ajouter" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="tableactivite" layoutX="768.0" layoutY="175.0" prefHeight="288.0" prefWidth="320.0" style="-fx-background-color: #131022;">
+                           <columns>
+                              <TableColumn fx:id="cnoma" prefWidth="90.0" text="Nom" />
+                              <TableColumn fx:id="cprixa" prefWidth="64.0" text="Prix" />
+                              <TableColumn fx:id="cdesca" prefWidth="165.0" text="Description" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnedit" layoutX="995.0" layoutY="492.0" mnemonicParsing="false" onAction="#editr" style="-fx-background-color: #a868a0;" text="Modifier" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btndelete" layoutX="774.0" layoutY="492.0" mnemonicParsing="false" onAction="#supprimer" style="-fx-background-color: #a868a0;" text="supprimer" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="tfrecherche" layoutX="849.0" layoutY="106.0" />
+                        
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="42.0" fitWidth="41.0" layoutX="125.0" layoutY="21.0" onMouseClicked="#BackToHome" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ressources/Homeicon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="173.0" layoutY="38.0" text="Acceuil" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                 
+                              <ImageView fitHeight="99.0" fitWidth="93.0" layoutX="27.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ressources/activity.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

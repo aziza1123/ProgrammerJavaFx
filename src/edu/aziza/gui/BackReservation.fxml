@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="587.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.aziza.gui.BackReservationController">
+   <children>
+      <TableView fx:id="tablereservationb" layoutX="143.0" layoutY="93.0" prefHeight="456.0" prefWidth="655.0">
+        <columns>
+          <TableColumn fx:id="cnomrb" prefWidth="155.0" text="Nom" />
+          <TableColumn fx:id="cprenomrb" prefWidth="152.0" text="Prenom" />
+            <TableColumn fx:id="cnumrb" prefWidth="131.0" text="Num" />
+            <TableColumn fx:id="cmailrb" prefWidth="216.0" text="Mail" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfrechercherb" layoutX="164.0" layoutY="37.0" promptText="Recherche" />
+      <AnchorPane fx:id="anchorpaneres" prefHeight="581.0" prefWidth="863.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stck" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1123.0" styleClass="Applicationlkol" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.aziza.gui.FrontSponsorController">
+   <children>
+      <AnchorPane fx:id="rootUsers" prefHeight="726.0" prefWidth="942.0" styleClass="Applicationlkol" stylesheets="@Style.css">
+         <children>
+            <Pane fx:id="ContainerUsersAdmin" layoutY="-1.0" prefHeight="726.0" prefWidth="1123.0" styleClass="pageApplication" stylesheets="@Style.css">
+               <children>
+                   <Circle fx:id="imgOnline" fill="#2f9a48" layoutX="37.0" layoutY="34.0" radius="9.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+                  <ScrollPane fx:id="scrollPane" layoutX="111.0" layoutY="80.0" prefHeight="603.0" prefWidth="973.0" style="-fx-background-color: #e7addc#e7addc;" />
+               </children></Pane>
+            <JFXButton layoutX="1073.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#close_app" prefHeight="30.0" prefWidth="40.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/close_window.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Pane layoutY="-1.0" prefHeight="727.0" prefWidth="96.0" style="-fx-background-color: #e7addc#e7addc; -fx-background-radius: 30px 0px 0px 30px;">
+               <children>
+                  <ImageView fx:id="imageViewProfile" fitHeight="100.0" fitWidth="81.0" layoutX="9.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/image-not-found.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="textName" fill="WHITE" layoutX="4.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h3" textAlignment="CENTER" wrappingWidth="87.9999868273735">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textUserType" fill="WHITE" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h4" textAlignment="CENTER" wrappingWidth="96.00000137090683">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="27.0" layoutY="144.0" onMouseClicked="#LogoutClicked" prefHeight="25.0" prefWidth="25.0" ripplerFill="#ffffff16" text=" " textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="EXIT_TO_APP" size="25" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXButton>
+                  <JFXButton layoutX="22.0" layoutY="206.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#GotoSponsor" prefHeight="45.0" prefWidth="55.0" text="Users">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/spons.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Label layoutX="529.0" layoutY="13.0" prefHeight="46.0" prefWidth="123.0" text="Sponsor" textFill="#bfbbd0">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stck" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="725.0" styleClass="Applicationlkol" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.aziza.gui.LoginController">
+   <children>
+      <AnchorPane fx:id="root" prefHeight="200.0" prefWidth="200.0" styleClass="Applicationlkol" stylesheets="@Style.css">
+         <children>
+            <Pane layoutX="71.0" layoutY="40.0" prefHeight="621.0" prefWidth="586.0" style="-fx-background-color: #a868a0;" styleClass="pageLogin" stylesheets="@Style.css">
+               <children>
+                  <Pane fx:id="PageLogin" layoutX="78.0" layoutY="90.0" prefHeight="442.0" prefWidth="430.0" styleClass="navbarLogin" stylesheets="@Style.css">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="220.0" layoutY="373.0" onMouseClicked="#GoToSignUp" prefHeight="45.0" prefWidth="186.0" ripplerFill="#fc64f4" style="-fx-background-image: #a868a0;" styleClass="button-login" text="Créer un compte" textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </JFXButton>
+                        <Line endX="203.0" layoutX="215.0" layoutY="364.0" startX="-200.0" style="-fx-opacity: 0.9;" />
+                        <JFXTextField fx:id="txtEmailLogin" layoutX="123.0" layoutY="179.0" prefHeight="30.0" prefWidth="186.0" promptText="Email" text="yassin@gmail.com" />
+                        <JFXButton layoutX="18.0" layoutY="373.0" onMouseClicked="#GoToSign" prefHeight="45.0" prefWidth="186.0" ripplerFill="#ff80ea" styleClass="button-inscription" stylesheets="@Style.css" text="Connexion" textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="45.0" fitWidth="59.0" layoutX="62.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/password.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="45.0" fitWidth="59.0" layoutX="62.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/e-mail.png" />
+                           </image>
+                        </ImageView>
+                        <JFXPasswordField fx:id="txtPasswordLogin" focusColor="#2ab56f" labelFloat="true" layoutX="122.0" layoutY="228.0" prefHeight="37.0" prefWidth="186.0" promptText="Password" styleClass="jfx-text-field-login" text="24058589" unFocusColor="#bebec2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXTextField fx:id="txtShowPassword" focusColor="#2ab56f" labelFloat="true" layoutX="122.0" layoutY="228.0" prefHeight="37.0" prefWidth="186.0" promptText="Password" styleClass="jfx-text-field-login" unFocusColor="#bebec2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <Pane fx:id="paneIcon" layoutX="270.0" layoutY="232.0" prefHeight="29.0" prefWidth="43.0" style="-fx-background-color: white;">
+                           <children>
+                              <FontAwesomeIconView fx:id="icon" glyphName="EYE_SLASH" layoutX="11.0" layoutY="21.0" opacity="0.5" size="15" />
+                           </children>
+                        </Pane>
+                        <Label fx:id="passOublier" layoutX="138.0" layoutY="283.0" onMouseClicked="#PassOublierClicked" prefHeight="21.0" prefWidth="165.0" text="Mot de Passe oublié !" textFill="#202bbc" />
+                        <Label layoutX="101.0" layoutY="52.0" prefHeight="21.0" prefWidth="207.0" text="    Login" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="41.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="btnLogin" layoutX="140.0" layoutY="326.0" onMouseClicked="#connexion" prefHeight="30.0" prefWidth="128.0" ripplerFill="#fffafa" style="-fx-background-color: #131022;" text="Connexion" textFill="WHITE">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+              <JFXButton layoutX="532.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#close_app" prefHeight="30.0" prefWidth="40.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/close_window.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+               </children></Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

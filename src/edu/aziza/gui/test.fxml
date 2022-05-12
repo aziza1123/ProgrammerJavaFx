@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.aziza.gui.TestController">
+   <children>
+      <AnchorPane prefHeight="704.0" prefWidth="1089.0" style="-fx-background-radius: 20;">
+         <children>
+            <AnchorPane prefHeight="800.0" prefWidth="1341.0" style="-fx-background-color: #030307; -fx-background-radius: 15;">
+               <children>
+                  <Pane layoutX="525.0" layoutY="-1.0" prefHeight="93.0" prefWidth="405.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                        <Pane layoutX="-14.0" prefHeight="93.0" prefWidth="405.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@../../../../../../../Bureau/Gestion_Forum%20Projet%20java%20Fx/src/css/fullpackstyling.css">
+                           <children>
+                              <Label layoutX="293.0" layoutY="21.0" text="PROGRAMNA" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <AnchorPane layoutX="140.0" layoutY="92.0" prefHeight="669.0" prefWidth="1135.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                      
+                        <Label layoutX="36.0" layoutY="21.0" text="Espace" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="125.0" layoutY="21.0" text="Roulette" textFill="#fff600">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="81.0" layoutY="576.0" prefHeight="76.0" prefWidth="1016.0" style="-fx-background-radius: 20;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css" />
+                        <TableView fx:id="ListPubs2" layoutX="915.0" layoutY="175.0" prefHeight="127.0" prefWidth="173.0" style="-fx-background-color: #131022;" visible="false">
+                          <columns>
+                            <TableColumn fx:id="libelle_Pubs" prefWidth="75.0" text="libelle" />
+                              <TableColumn fx:id="Nbr_Reaction" minWidth="8.0" prefWidth="109.0" text="Reactions" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="barre" layoutX="423.0" layoutY="25.0" prefHeight="31.0" prefWidth="251.0" />
+                        <Button fx:id="Button_Delete_Search" layoutX="674.0" layoutY="18.0" mnemonicParsing="false" onAction="#DeleteTextFromTextField" prefHeight="34.0" prefWidth="46.0" style="-fx-background-color: #a868a0;" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="X" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Button_Search" layoutX="704.0" layoutY="90.0" mnemonicParsing="false" onAction="#FindByLibelle" prefHeight="45.0" prefWidth="62.0" style="-fx-background-color: transparent;" styleClass="button4" stylesheets="@../css/fullpackstyling.css" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane layoutX="805.0" layoutY="249.0" prefHeight="171.0" prefWidth="173.0" />
+                        <TableView fx:id="tabroulette" layoutX="36.0" layoutY="82.0" onMouseClicked="#selectcom" onSort="#Afficher" prefHeight="335.0" prefWidth="489.0" style="-fx-background-color: #131022;">
+                           <columns>
+                              <TableColumn fx:id="cname" prefWidth="75.0" text="Name" />
+                              <TableColumn fx:id="cdescription" prefWidth="167.0" text="Description" />
+                              <TableColumn fx:id="cdebut" prefWidth="124.0" text="Debut" />
+                              <TableColumn fx:id="cfin" prefWidth="123.0" text="Fin" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="modifbtn" layoutX="39.0" layoutY="519.0" mnemonicParsing="false" onAction="#Modifier" style="-fx-background-color: #a868a0;" text="Modifier" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="supprbtn" layoutX="128.0" layoutY="519.0" mnemonicParsing="false" onAction="#supprimer" style="-fx-background-color: #a868a0;" text="Supprimer" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="pdf" layoutX="982.0" layoutY="18.0" mnemonicParsing="false" onAction="#ExportPDF" prefHeight="45.0" prefWidth="139.0" style="-fx-background-color: #a868a0;" text="Imprimer PDF" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="tfname" layoutX="878.0" layoutY="173.0" />
+                        <TextField fx:id="tfdescription" layoutX="878.0" layoutY="236.0" />
+                        <Label layoutX="788.0" layoutY="178.0" text="Name" textFill="#f2f2f2">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="788.0" layoutY="241.0" text="Description" textFill="#f8f5f5">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="788.0" layoutY="299.0" text="Debut" textFill="#f2f2f2">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="798.0" layoutY="359.0" text="Fin" textFill="#f2eded">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="ajoutbtn" layoutX="906.0" layoutY="405.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #a868a0;" text="Ajouter" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <DatePicker fx:id="tfdebut" layoutX="878.0" layoutY="294.0" prefHeight="31.0" prefWidth="187.0" />
+                        <DatePicker fx:id="tffin" layoutX="878.0" layoutY="354.0" prefHeight="31.0" prefWidth="187.0" />
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="132.0" layoutY="21.0" onMouseClicked="#GoToHome" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ressources/Homeicon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="170.0" layoutY="29.0" text="Acceuil" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="141.0" fitWidth="95.0" layoutX="30.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ressources/rouletteicon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

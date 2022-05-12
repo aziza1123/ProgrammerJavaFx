@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stck" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1123.0" styleClass="Applicationlkol" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.aziza.gui.SponsorBackController">
+   <children>
+      <AnchorPane fx:id="rootUsers" prefHeight="726.0" prefWidth="942.0" styleClass="Applicationlkol" stylesheets="@Style.css">
+         <children>
+            <Pane fx:id="ContainerUsersAdmin" layoutY="-1.0" prefHeight="726.0" prefWidth="1123.0" styleClass="pageApplication" stylesheets="@Style.css">
+               <children>
+                  <TabPane fx:id="PaneTableau" layoutX="159.0" layoutY="159.0" prefHeight="379.0" prefWidth="851.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="Tableau">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="531.0" prefWidth="974.0">
+                                 <children>
+                                    <TableView fx:id="TableView" prefHeight="346.0" prefWidth="851.0" stylesheets="@Style.css">
+                                       <columns>
+                                          <TableColumn fx:id="col_NomUser" prefWidth="247.0" text="Nom" />
+                                          <TableColumn fx:id="col_image" prefWidth="259.0" text="image" />
+                                          <TableColumn fx:id="col_Date" minWidth="8.0" prefWidth="343.0" text="Date" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                   <Circle fx:id="imgOnline" fill="#2f9a48" layoutX="37.0" layoutY="34.0" radius="9.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+                  <TextField fx:id="txtSearch" layoutX="449.0" layoutY="84.0" prefHeight="45.0" prefWidth="270.0" promptText="Tapez Quelque chose Pour chercher" style="-fx-background-color: linear-gradient(to right top, #141E30 , #243B55); -fx-text-fill: red; -fx-prompt-text-fill: white; -fx-background-radius: 1em;" />
+                  <Pane layoutX="284.0" layoutY="562.0" prefHeight="150.0" prefWidth="556.0" style="-fx-background-color: #F7F7F7; -fx-background-radius: 1em;">
+                     <children>
+                        <JFXTextField fx:id="txtNomLogin1" layoutX="72.0" layoutY="21.0" prefHeight="30.0" prefWidth="136.0" promptText="Nom" />
+                        <ImageView fx:id="iconNom1" fitHeight="45.0" fitWidth="59.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/nom.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="74.0" fitWidth="118.0" layoutX="448.0" layoutY="10.0" onMouseClicked="#iconAddUserClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/AddUser.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="479.0" layoutY="99.0" onMouseClicked="#SupprimerClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/deleteicon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="429.0" layoutY="98.0" onMouseClicked="#ModifierClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/editicon.png" />
+                           </image>
+                        </ImageView>
+                        <JFXDatePicker fx:id="txtDate" layoutX="79.0" layoutY="95.0" prefHeight="30.0" prefWidth="136.0" promptText="Date Fin" />
+                        <ImageView fx:id="iconDateNaissance" fitHeight="45.0" fitWidth="59.0" layoutX="14.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/calendrier.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="PreviewImage" fitHeight="117.0" fitWidth="117.0" layoutX="249.0" layoutY="18.0" onMouseClicked="#UploadImageClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/uploadimageicon.png" />
+                           </image></ImageView>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="112.0" layoutY="13.0" onMouseClicked="#GoToHomeBack" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ressources/Homeicon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="150.0" layoutY="21.0" text="Acceuil" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <JFXButton layoutX="1073.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#close_app" prefHeight="30.0" prefWidth="40.0">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/close_window.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Pane layoutY="-1.0" prefHeight="727.0" prefWidth="96.0" style="-fx-background-color: #e7addc; -fx-background-radius: 30px 0px 0px 30px;">
+               <children>
+                  <ImageView fx:id="imageViewProfile" fitHeight="100.0" fitWidth="81.0" layoutX="9.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="textName" fill="WHITE" layoutX="4.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h3" textAlignment="CENTER" wrappingWidth="87.9999868273735">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textUserType" fill="WHITE" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h4" textAlignment="CENTER" wrappingWidth="96.00000137090683">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="27.0" layoutY="144.0" onMouseClicked="#LogoutClicked" prefHeight="25.0" prefWidth="25.0" ripplerFill="#ffffff16" text=" " textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="EXIT_TO_APP" size="25" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXButton>
+                  <JFXButton layoutX="23.0" layoutY="196.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#GotoBackAdmin" prefHeight="45.0" prefWidth="55.0" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/usericon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="23.0" layoutY="252.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#GotoSponsor" prefHeight="45.0" prefWidth="55.0" text="Users">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/sponsicon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Label layoutX="529.0" layoutY="13.0" prefHeight="46.0" prefWidth="123.0" text="Sponsor" textFill="#bfbbd0">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

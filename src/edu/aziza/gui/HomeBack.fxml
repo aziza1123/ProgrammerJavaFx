@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.aziza.gui.HomeBackController">
+     <children>
+      <AnchorPane prefHeight="704.0" prefWidth="1089.0" style="-fx-background-radius: 20;">
+         <children>
+            <AnchorPane prefHeight="800.0" prefWidth="1341.0" style="-fx-background-color: #030307; -fx-background-radius: 15;">
+               <children>
+                  <Pane layoutX="525.0" layoutY="-1.0" prefHeight="93.0" prefWidth="405.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                        <Pane layoutX="-14.0" prefHeight="93.0" prefWidth="405.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@../../../../../../../Bureau/Gestion_Forum%20Projet%20java%20Fx/src/css/fullpackstyling.css" />
+                     </children>
+                  </Pane>
+                  <VBox prefHeight="800.0" prefWidth="122.0" style="-fx-background-color: #131022; -fx-background-radius: 15 0 0 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane prefHeight="79.0" prefWidth="94.0" style="-fx-background-radius: 15 0 15 15;" />
+                        <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#GoToActivity" prefHeight="66.0" prefWidth="124.0" style="-fx-background-color: #131022;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Activity" textFill="#a868a0">
+                           <graphic>
+                              <ImageView fitHeight="64.0" fitWidth="25.0" onMouseClicked="#BackToActivity" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/activity.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" layoutX="10.0" layoutY="76.0" mnemonicParsing="false" onMouseClicked="#GoToUsers" prefHeight="95.0" prefWidth="122.0" style="-fx-background-color: #131022;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="users" textFill="#a868a0">
+                           <graphic>
+                              <ImageView fx:id="usericon" fitHeight="25.0" fitWidth="48.0" onMouseClicked="#GoToUsers" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/usericon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" layoutX="10.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#GoToSponsors" prefHeight="139.0" prefWidth="122.0" style="-fx-background-color: #131022;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Sponsors" textFill="#a868a0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/sponsicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" mnemonicParsing="false" onMouseClicked="#GoToRoulette" prefHeight="90.0" prefWidth="126.0" style="-fx-background-color: #131022;" styleClass="button3" stylesheets="@../../../../../../../Bureau/Gestion_Forum%20Projet%20java%20Fx/src/css/fullpackstyling.css" text="Roulette" textFill="#a868a0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/rouletteicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" layoutX="10.0" layoutY="216.0" mnemonicParsing="false" onMouseClicked="#GoToPorduits" prefHeight="114.0" prefWidth="123.0" style="-fx-background-color: #131022;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="produits" textFill="#a868a0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/producticon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" layoutX="10.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#GoToEvent" prefHeight="162.0" prefWidth="126.0" style="-fx-background-color: #131022;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="events" textFill="#a868a0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/event.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" layoutX="10.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#GoToCadeau" prefHeight="130.0" prefWidth="133.0" style="-fx-background-color: #131022;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Cadeaux" textFill="#a868a0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="34.0" onMouseClicked="#GoToCadeau" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/cadeauicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" layoutX="10.0" layoutY="703.0" mnemonicParsing="false" onMouseClicked="#GoToPublication" prefHeight="135.0" prefWidth="130.0" style="-fx-background-color: #131022;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Publication et commentaire" textFill="#a868a0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="34.0" onMouseClicked="#GoToComments" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/publicationicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" layoutX="10.0" layoutY="595.0" mnemonicParsing="false" onMouseClicked="#GoToCategory" prefHeight="130.0" prefWidth="133.0" style="-fx-background-color: #131022;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Categorie" textFill="#a868a0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="34.0" onMouseClicked="#GoToCategorie" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/cateogryicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" layoutX="10.0" layoutY="529.0" mnemonicParsing="false" onMouseClicked="#GoToReservation" prefHeight="130.0" prefWidth="133.0" style="-fx-background-color: #131022;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Reservations" textFill="#a868a0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/reservationicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button contentDisplay="TOP" layoutX="10.0" layoutY="649.0" mnemonicParsing="false" onMouseClicked="#GoToTickets" prefHeight="130.0" prefWidth="133.0" style="-fx-background-color: #131022;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Tickets" textFill="#a868a0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../ressources/ticketsicon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <AnchorPane layoutX="140.0" layoutY="92.0" prefHeight="669.0" prefWidth="1135.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling.css">
+                     <children>
+                      
+                        <Label layoutX="36.0" layoutY="21.0" text="Espace" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="125.0" layoutY="21.0" prefHeight="66.0" prefWidth="193.0" text="home" textFill="#fff600">
+                           <font>
+                              <Font size="58.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="Button_Search" layoutX="704.0" layoutY="90.0" mnemonicParsing="false" onAction="#FindByLibelle" prefHeight="45.0" prefWidth="62.0" style="-fx-background-color: transparent;" styleClass="button4" stylesheets="@../css/fullpackstyling.css" textFill="#131022">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane layoutX="805.0" layoutY="249.0" prefHeight="171.0" prefWidth="173.0" />
+                        <ImageView fitHeight="451.0" fitWidth="441.0" layoutX="343.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../ressources/adminspace.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="132.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../ressources/Homeicon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="170.0" layoutY="29.0" text="Acceuil" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imageViewProfile" fitHeight="79.0" fitWidth="88.0" layoutX="1210.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="textName" fill="WHITE" layoutX="1111.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h3" text="AdminName" textAlignment="CENTER" wrappingWidth="87.9999868273735">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textUserType" fill="WHITE" layoutX="1115.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h4" text="Role" textAlignment="CENTER" wrappingWidth="96.00000137090683">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" ellipsisString="" layoutX="1098.0" layoutY="42.0" onMouseClicked="#LogoutClicked" prefHeight="25.0" prefWidth="25.0" ripplerFill="#ffffff16" text=" " textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="EXIT_TO_APP" size="25" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
